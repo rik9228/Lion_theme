@@ -1,0 +1,83 @@
+.card {
+  transition: 0.5s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.card__link {
+  display: flex;
+  flex-direction: column;
+
+  @include tab {
+    margin-top: 52px;
+  }
+}
+
+.card__box {
+  display: flex;
+  margin-top: 32px;
+
+  @include tab {
+    align-items: center;
+    margin-top: 64px;
+  }
+}
+
+.card__date,
+.card__category,
+.card__title {
+  font-family: "EB Garamond", serif;
+  color: $color-gray;
+  letter-spacing: 0.05em;
+  // IE Webフォント用
+  transform: rotate(0.001deg);
+}
+
+.card__category {
+  padding: 0.5em 3em;
+  border: 1px solid $color-gray;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  @include tab {
+    padding: 0.25em 3em;
+    display: flex;
+    align-items: center;
+  }
+
+  @include sp {
+    font-size: 10px;
+  }
+}
+
+.card__date {
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  @include sp {
+    font-size: 15px;
+  }
+}
+
+.card__date::after {
+  content: "";
+  width: 14px;
+  height: 1px;
+  display: inline-block;
+  background: $color-gray;
+  margin: 0 24px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 24px;
+}
+
+.card__image--blog {
+  max-width: 375px;
+  width: 100%;
+}

@@ -1,0 +1,73 @@
+.header__wrapper {
+  padding: 54px 120px;
+  width: calc(100% - 25px * 2);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tab {
+    padding: 19px 0;
+    width: calc(100% - 25px * 2);
+  }
+}
+
+.header__toggle-wrap {
+  width: 25px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+
+  @include tab {
+    display: block;
+  }
+}
+
+.header__toggle,
+.header__toggle::before,
+.header__toggle::after {
+  @include tab {
+    width: 25px;
+    height: 1px;
+    background: $color-gray;
+    transition: 0.3s;
+    display: block;
+  }
+}
+
+.header__toggle {
+  @include tab {
+    @include position(abs, 50%, n, n, 0);
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+}
+
+.header__toggle::before,
+.header__toggle::after {
+  content: "";
+  display: block;
+}
+
+.header__toggle::before {
+  margin-top: -9px;
+}
+
+.header__toggle.active {
+  background: transparent;
+}
+
+.header__toggle.active::before {
+  transform: rotate(45deg);
+  margin-top: 0px;
+}
+
+.header__toggle::after {
+  margin-top: 17px;
+}
+
+.header__toggle.active::after {
+  margin-top: -1px;
+  transform: rotate(-45deg);
+}

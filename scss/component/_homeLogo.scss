@@ -1,0 +1,8 @@
+.homeLogo__image {
+  @include tab {
+    width: 37px;
+    height: 48px;
+    position: relative;
+    z-index: 20;
+  }
+}

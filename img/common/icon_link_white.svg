@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44.411" height="44.411" viewBox="0 0 44.411 44.411">
+  <g id="arrow-right-circle" transform="translate(1 1)">
+    <path id="パス_50" data-name="パス 50" d="M13.5,9l6.376,6.376L13.5,21.752" transform="translate(10.966 5.755)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="2"/>
+    <path id="パス_51" data-name="パス 51" d="M7.5,12H23.44" transform="translate(4.214 9.131)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="2"/>
+    <path id="パス_52" data-name="パス 52" d="M18.188,12H15" transform="translate(12.654 9.131)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <ellipse id="楕円形_1" data-name="楕円形 1" cx="21.205" cy="21.205" rx="21.205" ry="21.205" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="2"/>
+  </g>
+</svg>

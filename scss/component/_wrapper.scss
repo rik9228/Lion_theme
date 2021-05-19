@@ -1,0 +1,10 @@
+// ラッパーモジュール
+.wrapper {
+  max-width: 1200px;
+  width: calc(100% - 32px * 2);
+  margin: 0 auto;
+
+  @include tab {
+    width: calc(100% - 25px * 2);
+  }
+}

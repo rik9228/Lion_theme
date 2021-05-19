@@ -1,0 +1,55 @@
+.title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: $color-gray;
+  font-family: "Noto Serif JP", serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  @include sp {
+    font-size: 14px;
+  }
+
+  &.title--border {
+    text-align: left;
+
+    @include tab {
+      text-align: center;
+    }
+  }
+
+  &.title--border::before {
+    margin-bottom: 36px;
+  }
+}
+
+// タイトルモジュール
+.title::before {
+  content: attr(data-en);
+  font-size: 60px;
+  display: block;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  margin-bottom: 28px;
+  color: $color-gray;
+  letter-spacing: 0.08em;
+  line-height: 0.68;
+
+  @include sp {
+    font-size: 41px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.title__border {
+  width: 24px;
+  height: 1px;
+  background: $color-gray-border;
+  margin-bottom: 36px;
+
+  @include tab {
+    margin: 0 auto 36px;
+  }
+}

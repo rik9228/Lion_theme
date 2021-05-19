@@ -1,0 +1,73 @@
+.media-second {
+  & .media__image {
+    background: url(#{$imgDirIndex}/img_menu_01@2x.jpg) center / cover no-repeat;
+    min-width: 29.7vw;
+    height: 500px;
+    border-radius: 30px;
+    margin-left: auto;
+  }
+}
+
+.media-second,
+.media-second--reverse {
+  & .media__image {
+    max-width: 880px;
+    width: 64vw;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 30px;
+
+    @include tab {
+      width: 100%;
+      height: auto;
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 56.6%;
+      }
+    }
+  }
+
+  & .media__title {
+    align-items: baseline;
+    margin-top: 25px;
+  }
+}
+
+.media-second__wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include tab {
+    max-width: 550px;
+    margin: 0 auto;
+    flex-direction: column-reverse;
+  }
+}
+
+.media-second__partition {
+  max-width: 570px;
+  // width: 100%;
+  width: 42vw;
+  @include position(abs, 50%, n, n, 0);
+  transform: translateY(-50%);
+  background: $color-white;
+  padding: 80px 48px;
+  border-radius: 30px;
+  @include tab {
+    max-width: initial;
+    width: 100%;
+    position: static;
+    transform: unset;
+    padding: 0;
+  }
+}
+
+.media-second--reverse {
+  & .media-second__partition {
+    left: initial;
+    // IE用
+    left: auto;
+    right: 0;
+  }
+}

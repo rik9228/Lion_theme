@@ -1,0 +1,18 @@
+.header-second {
+  @include position(fixed, 50%, n, n, 20px);
+  transform: translateY(-50%);
+  z-index: 5;
+
+  @include tab {
+    display: none;
+  }
+}
+
+.header-second__listFrame {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.header-second__listItem:not(:first-of-type) {
+  margin-top: 20px;
+}

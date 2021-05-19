@@ -1,0 +1,27 @@
+.link-wrap {
+  max-width: 200px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: $color-gray;
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.link:hover {
+  opacity: 0.4;
+}
+
+.link::after {
+  content: "";
+  width: 44px;
+  height: 44px;
+  display: block;
+  background: url(#{$imgDirCommon}/icon_link.svg) center / contain no-repeat;
+  margin-left: 18px;
+}

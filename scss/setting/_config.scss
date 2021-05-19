@@ -1,0 +1,43 @@
+// コンポーネント化できるものを記述
+
+// 使用方法：任意のセレクタに
+// @include sp{
+//     width:300px;
+// }
+// のように記述。
+
+$tab: 1024px;
+$sp: 599px;
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+//画像格納ディレクトリ
+$imgDir: "/img/";
+$imgDirCommon: "/img/common";
+$imgDirIndex: "/img/index";
+
+// color変数定義
+$color-white: #ffffff;
+$color-primaryPink: #f9e1d7;
+$color-secondaryPink: #e8c2b1;
+$color-gray: #505050;
+$color-gray-border: #707070;
+$color-brown: #9a746275;
+
+// SP font-size
+$fz-small: 3.2vw;
+$fz-medium: 3.8vw;
+$fz-large: 4.3vw;
+$fz-Xlarge: 4.8vw;
+$fz-title: 7vw;
+$fz-subTitle: 5.4vw;

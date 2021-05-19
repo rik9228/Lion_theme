@@ -1,0 +1,71 @@
+.footer {
+  padding: 152px 0 138px 0;
+
+  @include tab {
+    padding: 100px 0 25px 0;
+  }
+  & .homeLogo {
+    margin-right: 96px;
+    @include tab {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  margin-left: 112px;
+
+  @include tab {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+  }
+}
+
+.footer__homeLogo {
+  width: 100%;
+  height: auto;
+
+  @include tab {
+    width: calc(100% / 2);
+    margin: 0 auto;
+  }
+}
+
+.navi-footer__listFrame {
+  display: flex;
+  @include tab {
+    margin-top: 35px;
+  }
+}
+.navi-footer__listItem {
+  &:not(:first-of-type) {
+    margin-left: 56px;
+  }
+}
+
+.navi-footer__link {
+  color: $color-gray;
+  font-size: 16px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+}
+
+.footer__copyright {
+  margin-top: 64px;
+  font-size: 13px;
+  font-family: "EB Garamond", serif;
+  color: $color-gray;
+  text-align: center;
+  // IE Webフォント用
+  transform: rotate(0.001deg);
+
+  @include tab {
+    margin-top: 70px;
+  }
+
+  @include sp {
+    font-size: 11px;
+  }
+}
