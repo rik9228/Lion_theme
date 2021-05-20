@@ -1,4 +1,6 @@
 "use strict";
+const $ = jQuery.noConflict();
+const userAgent = window.navigator.userAgent.toLowerCase();
 
 // 最小幅のみ
 new ViewportExtra(375);
@@ -35,6 +37,11 @@ $("#js-newsSlider").slick({
   ],
 });
 
+$("#sbi_images").slick({
+  variableWidth: true,
+  centerMode: true,
+});
+
 $("#js-headerToggle").click(function () {
   $(".header__toggle,.navi-header").toggleClass("active");
 });
@@ -47,7 +54,7 @@ function setHeight() {
 
 setHeight();
 
-window.addEventListener("resize", setHeight);
+window.addEventListener("resize", setHeight, { passive: true });
 // 100vhでツールバー下に要素を被らせなくする処理 ここまで
 
 // レスポンシブの360px未満対応を終わらせる処理
@@ -58,7 +65,7 @@ function switchViewport() {
     viewport.setAttribute("content", value);
   }
 }
-addEventListener("resize", switchViewport, false);
+addEventListener("resize", switchViewport, false, { passive: true });
 switchViewport();
 
 // #で始まるa要素をクリックした場合に処理
@@ -81,3 +88,12 @@ $("#js-scrollDown").click(function () {
 $("#js-navi-menu,#js-navi-aboutHifu").click(function () {
   $(".navi-header,.header__toggle").removeClass("active");
 });
+
+// new ScrollHint(".js-scrollable", {
+//   scrollHintIconAppendClass: "scroll-hint-icon-white", // white-icon will appear
+//   applyToParents: true,
+//   i18n: {
+//     scrollable: "スクロールできます",
+//     remainingTime: -1,
+//   },
+// });

@@ -105,7 +105,7 @@
   margin-left: 15px;
 }
 
-.navi-header__listItem:not(:first-of-type) {
+.navi-header__listFrame li:not(:first-of-type) {
   margin-left: 56px;
 
   @include tab {
@@ -114,6 +114,7 @@
   }
 }
 
+.navi-header__listFrame a,
 .navi-header__link {
   display: block;
   color: $color-gray;

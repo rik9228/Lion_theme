@@ -156,12 +156,13 @@
   @include tab {
     padding: 165px 0 0 0;
   }
-  & .title {
-    display: inline-flex;
-    align-items: center;
-    @include tab {
-      margin: 0 auto;
-    }
+}
+
+.news__title {
+  float: left;
+
+  @include tab {
+    float: none;
   }
 }
 
@@ -170,13 +171,7 @@
 }
 
 .news__box {
-  display: flex;
-  align-items: flex-start;
-
-  @include tab {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  position: relative;
 }
 
 .news__box--02 {
@@ -196,9 +191,19 @@
   }
 }
 
+.news__partition-wrap {
+  width: 140%;
+  transform: translateX(100px);
+
+  @include tab {
+    width: 100vw;
+    transform: unset;
+    margin-top: 56px;
+  }
+}
+
 .news__partition {
-  width: 120%; //slick用
-  margin-left: 100px;
+  width: 100%; //slick用
 
   @include tab {
     transform: translateX(-25px);
@@ -235,9 +240,10 @@
 
   @include tab {
     position: relative;
-    width: 330px;
-    height: 300px;
-    // width: 100%;
+    width: 88vw;
+    height: 80vw;
+    max-width: 530px;
+    max-height: 500px;
     // padding-top: 90%;
     margin: 45px auto 0;
     right: 0;
@@ -405,6 +411,40 @@
   }
 }
 // aboutHifu end
+
+// instagram start
+
+.sbi_header_link {
+  display: none !important;
+}
+
+.sb_instagram_header {
+  padding-top: 92px !important;
+  @include tab {
+    padding-top: 41px !important;
+  }
+}
+
+.sbi_item {
+  max-width: 362px !important;
+  @include tab {
+    max-width: 227px !important;
+  }
+}
+
+.sbi_photo_wrap {
+  margin: 0 16px;
+}
+
+.sbi_photo {
+  border-radius: 10px !important;
+}
+
+#sbi_images {
+  padding: 0px !important;
+}
+
+// instagram end
 
 // information start
 

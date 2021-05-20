@@ -1,0 +1,17 @@
+.mainVisual-second {
+  width: 100%;
+  height: 600px;
+  background: url(#{$imgDirAbout}/bgimg_about_01@2x.jpg) center / cover no-repeat;
+  position: relative;
+}
+
+.mainVisual-second__title {
+  text-align: left;
+  @include position(abs, 50%, n, n, n);
+  transform: translateY(-50%);
+  color: $color-white;
+
+  &::before {
+    color: $color-white;
+  }
+}

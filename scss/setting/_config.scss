@@ -22,9 +22,10 @@ $sp: 599px;
 }
 
 //画像格納ディレクトリ
-$imgDir: "/img/";
-$imgDirCommon: "/img/common";
-$imgDirIndex: "/img/index";
+$imgDir: "../../img/";
+$imgDirCommon: "../../img/common";
+$imgDirIndex: "../../img/index";
+$imgDirAbout: "../../img/about";
 
 // color変数定義
 $color-white: #ffffff;

@@ -39,13 +39,13 @@
     margin-top: 35px;
   }
 }
-.navi-footer__listItem {
+.navi-footer__listFrame li {
   &:not(:first-of-type) {
     margin-left: 56px;
   }
 }
 
-.navi-footer__link {
+.navi-footer__listFrame a {
   color: $color-gray;
   font-size: 16px;
   font-family: "Noto Serif JP", serif;

@@ -34,69 +34,72 @@
   <section class="news section" id="js-news">
     <div class="news__wrapper wrapper">
       <div class="news__box">
-        <h2 class="title" data-en="NEWS">ニュース</h2>
-        <div class="news__partition" id="js-newsSlider">
-          <div class="card news__card">
-            <a class="card__link" href="/">
-              <div class="card__image-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/index/img_card_01@2x.jpg" alt="画像：サムネイル" class="card__image news__image" />
-              </div>
-              <div class="card__box">
-                <p class="card__date"><time datetime="2020.11.01">2020.11.01</time></p>
-                <p class="card__category">お知らせ</p>
-              </div>
-              <p class="card__title">タイトルタイトル</p>
-            </a>
-          </div>
-          <div class="card news__card">
-            <a class="card__link" href="/">
-              <div class="card__image-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/index/img_card_01@2x.jpg" alt="画像：サムネイル" class="card__image news__image" />
-              </div>
-              <div class="card__box">
-                <p class="card__date"><time datetime="2020.11.01">2020.11.01</time></p>
-                <p class="card__category">お知らせ</p>
-              </div>
-              <p class="card__title">タイトルタイトル</p>
-            </a>
-          </div>
-          <div class="card news__card">
-            <a class="card__link" href="/">
-              <div class="card__image-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/index/img_card_01@2x.jpg" alt="画像：サムネイル" class="card__image news__image" />
-              </div>
-              <div class="card__box">
-                <p class="card__date"><time datetime="2020.11.01">2020.11.01</time></p>
-                <p class="card__category">お知らせ</p>
-              </div>
-              <p class="card__title">タイトルタイトル</p>
-            </a>
-          </div>
-          <div class="card news__card">
-            <a class="card__link" href="/">
-              <div class="card__image-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/index/img_card_01@2x.jpg" alt="画像：サムネイル" class="card__image news__image" />
-              </div>
-              <div class="card__box">
-                <p class="card__date"><time datetime="2020.11.01">2020.11.01</time></p>
-                <p class="card__category">お知らせ</p>
-              </div>
-              <p class="card__title">タイトルタイトル</p>
-            </a>
-          </div>
-          <div class="card news__card">
-            <a class="card__link" href="/">
-              <div class="card__image-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/index/img_card_01@2x.jpg" alt="画像：サムネイル" class="card__image news__image" />
-              </div>
-              <div class="card__box">
-                <p class="card__date"><time datetime="2020.11.01">2020.11.01</time></p>
-                <p class="card__category">お知らせ</p>
-              </div>
-              <p class="card__title">タイトルタイトル</p>
-            </a>
+        <h2 class="title news__title" data-en="NEWS">ニュース</h2>
+        <div class="news__partition-wrap">
+          <div class="news__partition" id="js-newsSlider">
+            <div class="card news__card">
+              <a class="card__link" href="/">
+                <div class="card__image-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/index/img_card_01@2x.jpg" alt="画像：サムネイル" class="card__image news__image" />
+                </div>
+                <div class="card__box">
+                  <p class="card__date"><time datetime="2020.11.01">2020.11.01</time></p>
+                  <p class="card__category">お知らせ</p>
+                </div>
+                <p class="card__title">タイトルタイトル</p>
+              </a>
+            </div>
+            <div class="card news__card">
+              <a class="card__link" href="/">
+                <div class="card__image-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/index/img_card_01@2x.jpg" alt="画像：サムネイル" class="card__image news__image" />
+                </div>
+                <div class="card__box">
+                  <p class="card__date"><time datetime="2020.11.01">2020.11.01</time></p>
+                  <p class="card__category">お知らせ</p>
+                </div>
+                <p class="card__title">タイトルタイトル</p>
+              </a>
+            </div>
+            <div class="card news__card">
+              <a class="card__link" href="/">
+                <div class="card__image-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/index/img_card_01@2x.jpg" alt="画像：サムネイル" class="card__image news__image" />
+                </div>
+                <div class="card__box">
+                  <p class="card__date"><time datetime="2020.11.01">2020.11.01</time></p>
+                  <p class="card__category">お知らせ</p>
+                </div>
+                <p class="card__title">タイトルタイトル</p>
+              </a>
+            </div>
+            <div class="card news__card">
+              <a class="card__link" href="/">
+                <div class="card__image-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/index/img_card_01@2x.jpg" alt="画像：サムネイル" class="card__image news__image" />
+                </div>
+                <div class="card__box">
+                  <p class="card__date"><time datetime="2020.11.01">2020.11.01</time></p>
+                  <p class="card__category">お知らせ</p>
+                </div>
+                <p class="card__title">タイトルタイトル</p>
+              </a>
+            </div>
+            <div class="card news__card">
+              <a class="card__link" href="/">
+                <div class="card__image-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/index/img_card_01@2x.jpg" alt="画像：サムネイル" class="card__image news__image" />
+                </div>
+                <div class="card__box">
+                  <p class="card__date"><time datetime="2020.11.01">2020.11.01</time></p>
+                  <p class="card__category">お知らせ</p>
+                </div>
+                <p class="card__title">タイトルタイトル</p>
+              </a>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
     <div class="link-wrap news__box--02">
@@ -252,8 +255,11 @@
 
   <!-- instagram start -->
   <section class="instagram section">
-    <div class="instagram__wrapper wrapper">
-      <h2 class="title" data-en="INSTAGRAM">Lionのこだわり</h2>
+    <div class="instagram__wrapper">
+      <h2 class="title" data-en="INSTAGRAM">インスタグラム</h2>
+      <div class="instagram__box">
+        <?php echo do_shortcode('[instagram-feed showfollow=false]'); ?>
+      </div>
     </div>
   </section>
   <!-- instagram end -->
@@ -270,7 +276,9 @@
           </div>
           <div class="information__partition">
             <dt class="information__term">住所</dt>
-            <dd class="information__description">〒123-4567<br /><br />テキストが入ります。テキストが入ります。テキストが入ります</dd>
+            <dd class="information__description">
+              <address>〒123-4567<br /><br />神戸市中央区加納町4丁目10</address>
+            </dd>
           </div>
           <div class="information__partition">
             <dt class="information__term">開店時間</dt>
@@ -295,11 +303,11 @@
       <h2 class="title" data-en="CONTACT">お問い合わせ</h2>
       <div class="contact__box">
         <div class="contact__partition">
-          <a href="" class="contact-link">
+          <a href="https://beauty.hotpepper.jp/kr/slnH000538023/?cstt=4" target="_blank" rel="noopener" class="contact-link">
             <p data-en="RESERVATION" class="contact-link__title">ご予約はこちら</p>
           </a>
-          <a href="" class="contact-link">
-            <p data-en="OFFICIAL&nbsp;LINE" class="contact-link__title">ご予約はこちら</p>
+          <a href="" target="_blank" rel="noopener" class="contact-link">
+            <p data-en="OFFICIAL&nbsp;LINE" class="contact-link__title">LINE公式アカウントはこちら</p>
           </a>
         </div>
       </div>
