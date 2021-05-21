@@ -12,6 +12,13 @@
   }
 }
 
+.sp-none {
+  display: block;
+  @include tab {
+    display: none;
+  }
+}
+
 // 試しに書いただけ↓
 .grid {
   display: grid;

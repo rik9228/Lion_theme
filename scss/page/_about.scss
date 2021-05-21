@@ -1,17 +1,73 @@
-.mainVisual-second {
-  width: 100%;
-  height: 600px;
-  background: url(#{$imgDirAbout}/bgimg_about_01@2x.jpg) center / cover no-repeat;
-  position: relative;
-}
+.aboutHifu-second__wrapper {
+  display: flex;
 
-.mainVisual-second__title {
-  text-align: left;
-  @include position(abs, 50%, n, n, n);
-  transform: translateY(-50%);
-  color: $color-white;
-
-  &::before {
-    color: $color-white;
+  @include tab {
+    flex-direction: column;
   }
 }
+
+.aboutHifu-second__image-wrap {
+  margin-left: 85px;
+
+  @include tab {
+    margin: 60px auto 0;
+  }
+}
+
+.aboutHifu-second__image {
+  min-width: 428px;
+  width: 100%;
+  height: auto;
+  @include sp {
+    width: 57vw;
+    min-width: 214px;
+  }
+}
+
+.aboutHifu-second__sentence {
+  font-size: 18px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: $color-gray;
+  text-align: justify;
+  line-height: 2.95;
+  @include lineHeightCrop(18, 52);
+  margin-top: 85px;
+
+  @include sp {
+    font-size: 13px;
+  }
+}
+
+// features start
+.features {
+  background: $color-primaryPink;
+  margin-top: 108px;
+  padding: 0;
+}
+
+.features__wrapper {
+  padding: 180px 0;
+}
+
+.features__box {
+  margin-top: 150px;
+}
+
+.features__partition {
+  &:not(:first-of-type) {
+    margin-top: 108px;
+  }
+}
+
+.features__image {
+  &[data-num="01"] {
+    background: url(#{$imgDirIndex}/img_compromise_01@2x.jpg) center / cover no-repeat;
+  }
+}
+// features end
+
+// comparison start
+
+// comparison end

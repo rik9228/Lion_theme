@@ -111,7 +111,7 @@
       <div class="concept__box wrapper">
         <div class="concept__partition">
           <h2 class="title title--border" data-en="CONCEPT">
-            <span class="title__border"></span>
+            <span class="title--border"></span>
             コンセプト
           </h2>
           <p class="concept__sentence">
@@ -172,7 +172,7 @@
     <div class="aboutHifu__wrapper">
       <div class="aboutHifu__box wrapper">
         <h2 class="title title--border" data-en="ABOUT&nbsp;HIFU">
-          <span class="title__border"></span>
+          <span class="title--border"></span>
           ハイフについて
         </h2>
         <div class="aboutHifu__partition">

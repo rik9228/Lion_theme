@@ -43,13 +43,19 @@
   }
 }
 
+.title--page {
+  text-align: center;
+}
+
 .title__border {
   width: 24px;
   height: 1px;
   background: $color-gray-border;
   margin-bottom: 36px;
+  text-align: left;
 
   @include tab {
+    text-align: center;
     margin: 0 auto 36px;
   }
 }

@@ -1,0 +1,43 @@
+.mainVisual-second {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  @include tab {
+    height: 225px;
+    width: calc(100% - 75px);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+}
+
+.mainVisual-second[data-page="about"] {
+  background: url(#{$imgDirAbout}/bgimg_about_01@2x.jpg) center / cover no-repeat;
+  @include tab {
+    background: url(#{$imgDirAbout}/bgimg_about_01_sp@2x.jpg) center / cover no-repeat;
+  }
+}
+
+.mainVisual-second[data-page="menu"] {
+  background: url(#{$imgDirMenu}/bgimg_menu_01@2x.jpg) center / cover no-repeat;
+  @include tab {
+    background: url(#{$imgDirMenu}/bgimg_menu_01_sp@2x.jpg) center / cover no-repeat;
+  }
+}
+
+.mainVisual-second[data-page="blog"] {
+  background: url(#{$imgDirBlog}/bgimg_blog_01@2x.jpg) center / cover no-repeat;
+  @include tab {
+    background: url(#{$imgDirBlog}/bgimg_blog_01_sp@2x.jpg) center / cover no-repeat;
+  }
+}
+
+.mainVisual-second__title {
+  text-align: left;
+  @include position(abs, 50%, n, n, n);
+  transform: translateY(-50%);
+  color: $color-white;
+
+  &::before {
+    color: $color-white;
+  }
+}
