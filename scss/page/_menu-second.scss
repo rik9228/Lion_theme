@@ -1,0 +1,48 @@
+.menu-second {
+  & .link-wrap {
+    margin: 90px auto 0;
+
+    @include tab {
+      margin: 50px auto 0;
+    }
+  }
+}
+
+.menu-second__title {
+  font-size: 34px;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  color: $color-gray;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.menu-second__box {
+  margin-top: 118px;
+
+  @include tab {
+    margin-top: 85px;
+  }
+}
+
+.menu-second__partition {
+  margin-top: 90px;
+
+  @include tab {
+    margin-top: 28px;
+  }
+}
+
+.menu-second__partition--02 {
+  margin-top: 190px;
+  @include tab {
+    margin-top: 102px;
+  }
+}
+
+.menu-second__box--02 {
+  margin-top: 184px;
+  @include tab {
+    margin-top: 102px;
+  }
+}

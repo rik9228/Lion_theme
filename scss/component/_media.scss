@@ -1,7 +1,7 @@
 .media,
 .media--reverse {
   @include tab {
-    max-width: 550px;
+    max-width: 525px;
     margin: 0 auto;
   }
 }
@@ -86,8 +86,8 @@
 
   @include sp {
     font-size: 13px;
-    line-height: 1.8;
-    @include lineHeightCrop(13, 24);
+    line-height: 2;
+    @include lineHeightCrop(13, 26);
   }
 }
 

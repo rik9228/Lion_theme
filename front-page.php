@@ -133,8 +133,10 @@
   <!-- compromise start -->
   <section class="compromise section" id="js-compromise">
     <div class="compromise__wrapper wrapper">
-      <h2 class="title" data-en="COMPROMISE">Lionのこだわり</h2>
-      <div class="compromise__box">
+      <h2 class="title" data-en="COMPROMISE">
+        <span class="title__border pc-none"></span>
+        Lionのこだわり</h2>
+      <div class="compromise__box" data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-easing="ease-in">
         <div class="media compromise__partition">
           <div class="media__wrapper">
             <div class="media__partition">
@@ -178,7 +180,7 @@
           <span class="title__border"></span>
           ハイフについて
         </h2>
-        <div class="aboutHifu__partition">
+        <div class="aboutHifu__partition" data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-easing="ease-in">
           <div class="aboutHifu__inWrapper">
             <p class="aboutHifu__sentence">
               テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
@@ -202,8 +204,11 @@
   <!-- menu start -->
   <section class="menu section" id="js-menu">
     <div class="menu__wrapper wrapper">
-      <h2 class="title" data-en="MENU">施術</h2>
-      <div class="menu__box">
+      <h2 class="title" data-en="MENU">
+        <span class="title__border pc-none"></span>
+        施術
+      </h2>
+      <div class="menu__box" data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-easing="ease-in">
         <div class="media-second menu__partition">
           <div class="media-second__wrapper">
             <div class="media-second__partition">
@@ -256,7 +261,9 @@
   <!-- instagram start -->
   <section class="instagram section">
     <div class="instagram__wrapper">
-      <h2 class="title" data-en="INSTAGRAM">インスタグラム</h2>
+      <h2 class="title" data-en="INSTAGRAM">
+        <span class="title__border pc-none"></span>
+        インスタグラム</h2>
       <div class="instagram__box">
         <?php echo do_shortcode('[instagram-feed showfollow=false]'); ?>
       </div>
@@ -267,8 +274,11 @@
   <!-- information start -->
   <section class="information section">
     <div class="information__wrapper wrapper">
-      <h2 class="title" data-en="INFORMATION">店舗情報</h2>
-      <div class="information__box">
+      <h2 class="title" data-en="INFORMATION">
+        <span class="title__border pc-none"></span>
+        店舗情報
+      </h2>
+      <div class="information__box" data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-easing="ease-in">
         <dl class="information__list">
           <div class="information__partition">
             <dt class="information__term">店舗名</dt>
@@ -300,7 +310,9 @@
   <!-- contact start -->
   <section class="contact section">
     <div class="contact__wrapper">
-      <h2 class="title" data-en="CONTACT">お問い合わせ</h2>
+      <h2 class="title" data-en="CONTACT">
+        <span class="title__border pc-none"></span>
+        お問い合わせ</h2>
       <div class="contact__box">
         <div class="contact__partition">
           <a href="https://beauty.hotpepper.jp/kr/slnH000538023/?cstt=4" target="_blank" rel="noopener" class="contact-link">

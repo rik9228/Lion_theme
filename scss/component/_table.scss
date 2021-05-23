@@ -1,0 +1,50 @@
+.table,
+.table__tr,
+.table__td,
+.table__th {
+  border: 1px solid $color-gray;
+  vertical-align: middle;
+}
+
+.table {
+  width: 100%;
+}
+
+.table__header,
+.table__th {
+  background: $color-primaryPink;
+  text-align: center;
+}
+
+.table__tr,
+.table__th {
+  font-size: 24px;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 0.08em;
+  // IE Webフォント用
+  font-weight: 400;
+  transform: rotate(0.001deg);
+  padding: 1.65em 1.35em;
+  max-width: 240px;
+  width: calc(100% / 5);
+  color: $color-gray;
+
+  @include sp {
+    font-size: 11px;
+  }
+}
+
+.table__th--02 {
+  text-align: left;
+}
+
+.table__td {
+  text-align: center;
+}
+
+.table__td--concat {
+  padding: 1.65em 0.75em;
+  line-height: 1.81;
+  @include lineHeightCrop(11, 20);
+  letter-spacing: 0.08em;
+}

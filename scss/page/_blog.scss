@@ -1,0 +1,89 @@
+.posts__wrapper {
+  margin-top: 196px;
+}
+
+.posts__box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 44px;
+  grid-template-areas:
+    "one two three"
+    "four five six"
+    "seven eight nine";
+  margin-top: 100px;
+
+  @include tab {
+    grid-template-areas:
+      "one two"
+      "three four"
+      "five six"
+      "seven eight"
+      "nine .";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include sp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card:nth-of-type(1) {
+  grid-area: one;
+}
+.card:nth-of-type(2) {
+  grid-area: two;
+}
+.card:nth-of-type(3) {
+  grid-area: three;
+}
+.card:nth-of-type(4) {
+  grid-area: four;
+}
+.card:nth-of-type(5) {
+  grid-area: five;
+}
+.card:nth-of-type(6) {
+  grid-area: six;
+}
+.card:nth-of-type(7) {
+  grid-area: seven;
+}
+.card:nth-of-type(8) {
+  grid-area: eight;
+}
+.card:nth-of-type(9) {
+  grid-area: nine;
+}
+
+.posts__listFrame {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1055px;
+  margin: 0 auto;
+
+  @include tab {
+    flex-direction: column;
+  }
+}
+
+.posts__listItem {
+  @include tab {
+    &:not(:first-of-type) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.posts__link-category {
+  font-size: 16px;
+  color: $color-primaryPink;
+  border: 1px solid $color-primaryPink;
+  border-radius: 10px;
+  display: block;
+  min-width: 248px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+}

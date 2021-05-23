@@ -242,9 +242,8 @@
     position: relative;
     width: 88vw;
     height: 80vw;
-    max-width: 530px;
+    max-width: 550px;
     max-height: 500px;
-    // padding-top: 90%;
     margin: 45px auto 0;
     right: 0;
   }
@@ -308,13 +307,16 @@
   transform: rotate(0.001deg);
   line-height: 2.88;
   margin-top: 88px;
-  transform: rotate(0.001deg);
   color: $color-gray;
 
+  @include tab {
+    margin-top: 9.1vw;
+  }
+
   @include sp {
+    line-height: 2;
     font-size: 13px;
-    @include lineHeightCrop(13, 52);
-    margin-top: 84px;
+    @include lineHeightCrop(13, 26);
   }
 }
 // concept end
@@ -322,6 +324,9 @@
 // menu start
 .menu__box {
   margin-top: 104px;
+  @include tab {
+    margin-top: 15.4vw;
+  }
 }
 
 .menu__box--02 {
@@ -349,7 +354,7 @@
   margin-top: 80px;
 
   @include tab {
-    max-width: 550px;
+    max-width: 525px;
     margin: 0 auto;
     flex-direction: column;
   }
@@ -369,7 +374,7 @@
   @include tab {
     width: 100%;
     height: auto;
-    margin: 26px 0 0 0;
+    margin: 6.9vw 0 0 0;
     &:before {
       content: "";
       display: block;
@@ -395,7 +400,7 @@
   letter-spacing: 0.08em;
 
   @include tab {
-    margin-top: 40px;
+    margin-top: 6.9vw;
   }
 
   @include sp {

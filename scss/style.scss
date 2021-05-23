@@ -23,6 +23,8 @@
 @import "./component/card";
 @import "./component/link";
 @import "./component/mainVisual-second";
+@import "./component/plan";
+@import "./component/table";
 
 @import "./layout/header";
 @import "./layout/header-second";
@@ -31,5 +33,5 @@
 // pages
 @import "./page/index";
 @import "./page/about";
-@import "./page/menu";
+@import "./page/menu-second";
 @import "./page/blog";

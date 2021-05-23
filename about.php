@@ -23,7 +23,7 @@ get_header(); ?>
     <div class="aboutHifu-second__wrapper wrapper">
       <div class="aboutHifu-second__box">
         <h2 class="title title--border" data-en="ABOUT&nbsp;HIFU">
-          <span class="title__border title__border--deco"></span>
+          <span class="title__border"></span>
           ハイフとは
         </h2>
         <p class="aboutHifu-second__sentence">

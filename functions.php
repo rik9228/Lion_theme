@@ -2,8 +2,8 @@
 
 function my_enqueue_scripts()
 {
-  wp_enqueue_style('font_awasome', 'https://use.fontawesome.com/releases/v5.6.1/css/all.css', array());
   wp_enqueue_script('viewport-extra', 'https://cdn.jsdelivr.net/npm/viewport-extra@1.0.2/dist/viewport-extra.min.js', array());
+  wp_enqueue_script('object-fit', 'https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.js', array());
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
 
@@ -22,14 +22,20 @@ function add_files()
   }
 
   wp_css('my_style', '/dist/css/style.css');
+  wp_css('aos_style', '/dist/css/aos/aos.css');
   // wp_css('scroll-hint_css', '/dist/css/scroll-hint/scroll-hint.css');
   wp_css('slick_theme', '/dist/css/slick/slick.min.css');
   wp_css('slick_css', '/dist/css/slick/slick-theme.min.css');
   wp_script('jquery', '');
-  wp_script('picturefill_js', '/dist/js/picturefill.min.js');
-  wp_script('slick_js', '/dist/js/slick.min.js');
+  wp_script('script_picturefill', '/dist/js/picturefill.min.js');
+  wp_script('script_slick', '/dist/js/slick.min.js');
+  wp_script('script_aos', '/dist/js/aos.js');
   // wp_script('scroll-hint_js', '/dist/js/scroll-hint.min.js');
-  wp_script('script_js', '/dist/js/script.min.js');
+  wp_script('script_common', '/dist/js/common.min.js');
+
+  if (is_front_page()) {
+    wp_script('script_index', '/dist/js/index.min.js');
+  }
 }
 add_action('wp_enqueue_scripts', 'add_files', 1);
 
@@ -49,7 +55,7 @@ add_theme_support('responsive-embeds');
 
 //アクション画像を有効化
 add_theme_support('post-thumbnails');
-// set_post_thumbnail_size(231, 127, false);
+
 add_theme_support('menu');
 
 //カスタムメニューの有効化、メニューの位置を設定
@@ -135,6 +141,34 @@ add_filter('nav_menu_css_class', 'removeMenuClass', 10, 2);
 // pタグからデフォルトで吐き出される'p'を削除する
 remove_filter('the_excerpt', 'wpautop');
 
+/*
+ * 投稿にアーカイブ(投稿一覧)を持たせるようにします。
+ * ※ 記載後にパーマリンク設定で「変更を保存」してください。
+ */
+function post_has_archive($args, $post_type)
+{
+  if ('post' == $post_type) {
+    $args['rewrite'] = true;
+    $args['has_archive'] = 'blog'; // ページ名
+  }
+  return $args;
+}
+add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+
+// scriptタグから（type属性,id属性を削除する）
+function remove_script_type($tag)
+{
+  return preg_replace(array("/'/", '/(id|type)=".+?" */', '/ \/>/'), array('"', '', '>'), $tag);
+}
+add_filter('script_loader_tag', 'remove_script_type');
+
+
+// linkタグ（CSS）から（type属性,id属性、media属性を削除する）
+function remove_style_type($tag)
+{
+  return preg_replace(array("/'/", '/(id|type|media)=".+?" */', '/ \/>/'), array('"', '', '>'), $tag);
+}
+add_filter('style_loader_tag', 'remove_style_type');
 
 // function add_prev_post_link_class($output)
 // {

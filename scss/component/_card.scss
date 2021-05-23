@@ -78,5 +78,14 @@
 
 .card__image--blog {
   max-width: 375px;
+  max-height: 228px;
+  height: 11.8vw;
   width: 100%;
+  object-fit: cover;
+  font-family: "object-fit: cover;"; //IE対策
+  border-radius: 20px;
+
+  @include tab {
+    max-width: initial;
+  }
 }

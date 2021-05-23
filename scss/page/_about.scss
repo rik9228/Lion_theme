@@ -53,6 +53,10 @@
 
 .features__box {
   margin-top: 150px;
+
+  @include tab {
+    margin-top: 11.8vw;
+  }
 }
 
 .features__partition {
