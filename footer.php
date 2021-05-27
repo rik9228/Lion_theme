@@ -7,7 +7,7 @@
           <source class="footer__homeLogo" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img_homelogo_footer_pc@2x.png" media="(min-width: 1025px)" />
           <source class="footer__homeLogo" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img_homelogo_footer_sp@2x.png" media="(max-width: 1024px)" />
           <img class="footer__homeLogo" src="<?php echo get_template_directory_uri(); ?>/img/common/img_homelogo_footer_pc@2x" alt="ロゴ画像：トップ戻る" />
-          <picture>
+        </picture>
       </a>
     </div>
     <div class="footer__box">

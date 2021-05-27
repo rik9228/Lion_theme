@@ -6,7 +6,6 @@
  * これは"ハイフについて"の固定テンプレートです。
  */
 
-
 get_header(); ?>
 
 <main>
@@ -98,7 +97,7 @@ get_header(); ?>
         他サロンとの比較
       </h2>
       <div class="comparison__image-wrap">
-        <!-- <img class="comparison__image" src="<?php echo get_template_directory_uri(); ?>/img/about/img_about_03.svg" alt=""> -->
+        <img class="comparison__image" src="<?php echo get_template_directory_uri(); ?>/img/about/img_about_02.svg" alt="図：他サロンとの比較料金表">
       </div>
     </div>
   </section>

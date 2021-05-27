@@ -19,6 +19,26 @@
   }
 }
 
+.tab-current {
+  background: $color-primaryPink !important;
+  color: $color-white !important;
+}
+
+.wp-pagenavi-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+  padding: 8px 13px !important;
+  background: $color-primaryPink;
+  border: none !important;
+  border-radius: 5px;
+  color: $color-white;
+  font-size: 14px;
+}
+
 // // 試しに書いただけ↓
 // .posts__wrapper {
 //   display: grid;

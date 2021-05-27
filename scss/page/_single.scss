@@ -1,0 +1,158 @@
+.single {
+  font-family: "EB Garamond", serif;
+}
+
+.single__partition {
+  display: flex;
+  margin-top: 40px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid $color-primaryPink;
+}
+
+.single__partition--02 {
+  margin-top: 96px;
+}
+
+.single__partition--02 h2 {
+  display: flex;
+  align-items: center;
+}
+
+.single__partition--02 h2::before {
+  content: "";
+  width: 3px;
+  height: 26px;
+  display: block;
+  background: $color-primaryPink;
+  margin-right: 10px;
+}
+
+.single__partition--03 {
+  margin-top: 120px;
+  @include tab {
+    margin-top: 80px;
+  }
+}
+
+.single__listFrame {
+  display: flex;
+  justify-content: space-between;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.single__list {
+  max-width: 408px;
+  width: 100%;
+  line-height: 67px;
+  height: 67px;
+  position: relative;
+}
+
+.single__list--prev,
+.single__list--home,
+.single__list--next {
+  background: $color-graySingle;
+  border-radius: 11px;
+}
+
+.single__list--home {
+  background: $color-primaryPink;
+}
+
+.single__list a {
+  color: $color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single__list--prev a::before,
+.single__list--next a::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid $color-white;
+  border-left: 2px solid $color-white;
+}
+
+.single__list--prev a::before {
+  margin-right: 12px;
+  transform: rotate(-45deg);
+}
+
+.single__list--next a::after {
+  margin-left: 12px;
+  transform: rotate(135deg);
+}
+// .single__list--prev a::before {
+//   @include position(abs, 50%, n, n, 45px);
+//   transform: translateY(-50%) rotate(-45deg);
+// }
+
+// .single__list--next a::before {
+//   @include position(abs, 50%, 45px, n, n);
+//   transform: translateY(-50%) rotate(-225deg);
+// }
+
+.single__list--home {
+  margin: 0 32px;
+}
+
+.single__date,
+.single__category,
+.single__title {
+  color: $color-gray;
+  letter-spacing: 0.05em;
+  // IE Webフォント用
+  transform: rotate(0.001deg);
+}
+
+.single__category,
+.single__title {
+  font-family: "Noto Serif JP", serif;
+}
+
+.single__category {
+  padding: 0.5em 3em;
+  border: 1px solid $color-gray;
+  font-size: 14px;
+  font-weight: 500;
+
+  @include tab {
+    padding: 0.25em 2em;
+    display: flex;
+    align-items: center;
+  }
+
+  @include sp {
+    font-size: 10px;
+  }
+}
+
+.single__date {
+  font-family: "EB Garamond", serif;
+  font-size: 24px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  @include sp {
+    font-size: 15px;
+  }
+}
+
+.single__date::after {
+  content: "";
+  width: 17px;
+  height: 1px;
+  display: inline-block;
+  background: $color-gray;
+  margin: 0 30px;
+}
+
+.single__title {
+  font-size: 30px;
+  font-weight: 500;
+  display: block;
+}

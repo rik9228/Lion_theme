@@ -23,23 +23,23 @@ function add_files()
 
   wp_css('my_style', '/dist/css/style.css');
   wp_css('aos_style', '/dist/css/aos/aos.css');
-  // wp_css('scroll-hint_css', '/dist/css/scroll-hint/scroll-hint.css');
   wp_css('slick_theme', '/dist/css/slick/slick.min.css');
   wp_css('slick_css', '/dist/css/slick/slick-theme.min.css');
   wp_script('jquery', '');
   wp_script('script_picturefill', '/dist/js/picturefill.min.js');
   wp_script('script_slick', '/dist/js/slick.min.js');
   wp_script('script_aos', '/dist/js/aos.js');
-  // wp_script('scroll-hint_js', '/dist/js/scroll-hint.min.js');
   wp_script('script_common', '/dist/js/common.min.js');
 
   if (is_front_page()) {
     wp_script('script_index', '/dist/js/index.min.js');
   }
+
+  if (is_archive() || is_category()) {
+    wp_script('script_blog', '/dist/js/blog.min.js');
+  }
 }
 add_action('wp_enqueue_scripts', 'add_files', 1);
-
-
 
 //head内にRSSフィードリンクを出力
 add_theme_support('automatic_feed_links');
@@ -57,6 +57,9 @@ add_theme_support('responsive-embeds');
 add_theme_support('post-thumbnails');
 
 add_theme_support('menu');
+
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
 
 //カスタムメニューの有効化、メニューの位置を設定
 register_nav_menus(
@@ -155,13 +158,6 @@ function post_has_archive($args, $post_type)
 }
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 
-// scriptタグから（type属性,id属性を削除する）
-function remove_script_type($tag)
-{
-  return preg_replace(array("/'/", '/(id|type)=".+?" */', '/ \/>/'), array('"', '', '>'), $tag);
-}
-add_filter('script_loader_tag', 'remove_script_type');
-
 
 // linkタグ（CSS）から（type属性,id属性、media属性を削除する）
 function remove_style_type($tag)
@@ -169,15 +165,3 @@ function remove_style_type($tag)
   return preg_replace(array("/'/", '/(id|type|media)=".+?" */', '/ \/>/'), array('"', '', '>'), $tag);
 }
 add_filter('style_loader_tag', 'remove_style_type');
-
-// function add_prev_post_link_class($output)
-// {
-//   return str_replace('<a href=', '<a class="BUTTON single__prev" href=', $output);
-// }
-// add_filter('previous_post_link', 'add_prev_post_link_class');
-
-// function add_next_post_link_class($output)
-// {
-//   return str_replace('<a href=', '<a class="BUTTON single__next" href=', $output);
-// }
-// add_filter('next_post_link', 'add_next_post_link_class');

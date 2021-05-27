@@ -1,5 +1,8 @@
 .posts__wrapper {
   margin-top: 196px;
+  @include tab {
+    margin-top: 80px;
+  }
 }
 
 .posts__box {

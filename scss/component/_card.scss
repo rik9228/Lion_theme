@@ -27,11 +27,15 @@
 .card__date,
 .card__category,
 .card__title {
-  font-family: "EB Garamond", serif;
   color: $color-gray;
   letter-spacing: 0.05em;
   // IE Webフォント用
   transform: rotate(0.001deg);
+}
+
+.card__category,
+.card__title {
+  font-family: "Noto Serif JP", serif;
 }
 
 .card__category {
@@ -52,6 +56,7 @@
 }
 
 .card__date {
+  font-family: "EB Garamond", serif;
   font-size: 20px;
   font-weight: 400;
   display: flex;
@@ -73,7 +78,8 @@
 .card__title {
   font-size: 18px;
   font-weight: 500;
-  margin-top: 24px;
+  display: block;
+  margin-top: 16px;
 }
 
 .card__image--blog {

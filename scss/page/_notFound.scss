@@ -1,0 +1,66 @@
+.notFound {
+  text-align: center;
+  background: url(#{$imgDirIndex}/bgimg_contact_01@2x.jpg) center / cover no-repeat;
+  width: 100%;
+  height: 650px;
+  margin-top: 88px;
+  position: relative;
+
+  &::before {
+    content: "";
+    @include position(abs, 0, n, n, 0);
+    width: 100%;
+    height: 100%;
+    background: $color-brown;
+  }
+
+  @include tab {
+    background: url(#{$imgDirIndex}/bgimg_contact_01_sp@2x.jpg) center / cover no-repeat;
+    height: 500px;
+  }
+}
+
+.notFound__title {
+  color: $color-white;
+  font-size: 32px;
+
+  @include sp {
+    font-size: 24px;
+  }
+}
+
+.notFound__wrapper {
+  @include position(abs, 50%, n, n, 50%);
+  transform: translate(-50%, -50%);
+}
+
+.notFound__box {
+  max-width: initial;
+  max-width: none;
+}
+
+.notFound__sentence {
+  position: relative;
+  line-height: 1.5;
+  font-size: 16px;
+  @include lineHeightCrop(14, 24);
+  color: $color-white;
+  margin-top: 40px;
+
+  @include sp {
+    font-size: 14px;
+  }
+}
+
+.notFound__box {
+  margin-top: 56px;
+}
+
+.notFound__link {
+  &::after {
+    content: none;
+  }
+  &:first-of-type {
+    margin: 0 auto;
+  }
+}
